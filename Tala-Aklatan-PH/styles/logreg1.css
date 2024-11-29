@@ -1,0 +1,106 @@
+.form-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 400px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid #8b4513;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    font-size: 32px;
+    color: #8b4513;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input-box input[type="text"],
+.input-box input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    padding-right: 0px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    font-size: 16px;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-box input[type="text"]:focus,
+.input-box input[type="password"]:focus {
+    border-color: #8b4513;
+    box-shadow: 0 0 5px rgba(139, 69, 19, 0.5);
+    outline: none;
+}
+
+.input-box span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8b4513;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #8b4513;
+    color: #ffffff;
+    border: none;
+    border-radius: 100px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #a0522d;
+    transform: translateY(-3px);
+}
+
+p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+a {
+    color: #8b4513;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red; /* Color for error message */
+    margin-top: 15px; /* Space from the form */
+    font-size: 14px; /* Font size */
+    text-align: center; /* Center the text */
+}

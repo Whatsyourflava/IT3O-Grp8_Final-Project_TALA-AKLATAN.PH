@@ -1,0 +1,182 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar Styles */
+
+
+/* Container for Books */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #8b4513; /* Dark brown for heading */
+    margin-bottom: 20px;
+}
+
+/* Book List Styles */
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.book {
+    background-color: #fafafa; /* Light background for book items */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth effect on hover */
+}
+
+.book:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.book-image {
+    width: 150px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensures images are cropped proportionally */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    color: #333; /* Dark text for book titles */
+    margin: 10px 0;
+}
+
+p {
+    font-size: 16px;
+    color: #555; /* Gray text for other details */
+    margin: 5px 0;
+}
+
+button {
+    background-color: #8b4513; /* Button color */
+    color: #ffffff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effects */
+}
+
+button:hover {
+    background-color: #a0522d; /* Lighter brown on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    /* Adjust logo size for smaller screens */
+    .navbar li a img.logo {
+        height: 35px; /* Slightly smaller logo on smaller screens */
+    }
+}
+
+/* Navbar Container */
+.navbar {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #8b4513; /* Rich brown background */
+    margin: 0;
+    border-bottom: 2px solid #ffd700; /* Gold border for style */
+}
+
+/* Navbar Items */
+.navbar li {
+    display: inline-block;
+    margin: 0 15px; /* Spacing between items */
+    position: relative;
+}
+
+/* Links Styling */
+.navbar a {
+    color: #fff; /* White text */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 12px; /* Padding for clickable area */
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ffd700; /* Gold hover background */
+    color: #8b4513; /* Brown text on hover */
+}
+
+/* Logo Styling */
+.logo {
+    width: 50px; /* Slightly larger logo */
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Cart Icon Badge */
+.badge {
+    background-color: #ff0000; /* Red for cart item count */
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px; /* Small badge size */
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+/* Cart Icon Styling */
+.cart-link i {
+    font-size: 24px; /* Larger cart icon */
+    color: #fff;
+    position: relative;
+}
+
+.cart-link {
+    position: relative; /* Required for badge positioning */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+    }
+
+    .navbar li {
+        margin-bottom: 10px; /* Space between items in vertical layout */
+    }
+}
